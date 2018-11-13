@@ -9,7 +9,7 @@ for iter=1:100000
                 suma = suma + A(k,l)*x(l);
             end;
         end;
-        x(k) = (b(k) - suma)/A(k,k);
+            x(k) = (b(k) - suma)/A(k,k);
     end;
     if sqrt(norm(x-y)) < 1e-6
         break;
