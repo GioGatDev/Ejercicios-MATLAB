@@ -1,12 +1,12 @@
-function Ainv = inversa(A)
+function inv = inversa(A)
 N = length(A);
 Af = Factorizacion(A);
-Ainv = zeros(N,N);
+inv = zeros(N,N);
 for k = 1: N
     b = zeros(N,1);
     b(k) = 1;
     y = sustitucion_hacia_adelante(Af, b);
     x = sustitucion_hacia_atras(Af, y);
-    Ainv(:,k) = x;
+    inv(:,k) = x;
 end; 
 end
